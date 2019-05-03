@@ -13,18 +13,27 @@ import javax.persistence.Table;
 @Table(name = "user_realm")
 public class User {
 
-    @Id
+    @Id // Unique and  nullable = false
     private int id;
-    @Column(unique=true,length = 255)
+    
+    //name is unique, not nullable and 50 length
+    @Column(unique = true, length = 50, nullable = false)
     private String name;
+    
+    //size of description
+    @Column(length = 255)
     private String description;
-    @Column(name = "key_password",length = 32)
+    
+    //key is not nullable and 32 length
+    // "name" is just to differ from what the JSON/XML returns to the database
+    @Column(name = "key_password", length = 32, nullable = false)
     private String password;
 
     public User(int id) {
         this.id = id;
     }
-    
+
+    //getters e setters
     public int getId() {
         return id;
     }
