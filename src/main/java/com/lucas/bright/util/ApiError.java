@@ -3,9 +3,11 @@ package com.lucas.bright.util;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 /**
- *
+ * The class is used to return message to USER
+ * here we can add a lot of different messages 
  * @author Lucas Daniel
  */
+
 @JacksonXmlRootElement(localName = "error")
 public class ApiError {
 
