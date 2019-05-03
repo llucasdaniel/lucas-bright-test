@@ -59,7 +59,7 @@ public class UserController {
         //save the object in database
         User usersave = userService.saveUser(user);
 
-        return ResponseEntity.ok(usersave);
+        return ResponseEntity.status(HttpStatus.CREATED).body(usersave);
     }
 
     @GetMapping(path = "/{id}", produces = {"application/json", "application/xml"})

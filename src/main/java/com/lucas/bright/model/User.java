@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Length;
 
 /**
  *
@@ -27,12 +28,14 @@ public class User implements Serializable {
 
     //name is unique, not nullable and 50 length
     @Column(unique = true, length = 50, nullable = false)
+    @Length(max = 50)
     @NotEmpty
     @JacksonXmlProperty(isAttribute = true)
     private String name;
 
     //size of description
     @Column(length = 255)
+    @Length(max = 255)
     private String description;
 
     //key is not nullable and 32 length
