@@ -1,4 +1,5 @@
-"# lucas-bright-test" 
+# Lucas BrighTalk
+[![Build Status](https://travis-ci.org/llucasdaniel/lucas-bright-test.svg?branch=master)](https://travis-ci.org/llucasdaniel/lucas-bright-test)
 
 	This is an API which use:
 	- Sring boot Aplication;
